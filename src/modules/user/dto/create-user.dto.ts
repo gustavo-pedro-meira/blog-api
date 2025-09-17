@@ -17,5 +17,6 @@ export class CreateUserDto {
 
     @IsNotEmpty({ message: "A senha não pode ser vazio." })
     @MinLength(6, { message: "O min de caracteres da senha é 6." })
+    @IsString()
     password: string;
 }
